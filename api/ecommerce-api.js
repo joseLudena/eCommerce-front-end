@@ -1,9 +1,13 @@
 import axios from "axios";
-const URL = "http://localhost:8000";
+const URL = process.env.NEXT_PUBLIC_API_URL;
 
 export async function getProducts() {
    try {
-      const response = await axios.get(`${URL}/product/all`);
+      const response = await axios.get(`${URL}/product/all`, {
+         headers: {
+            'ngrok-skip-browser-warning': 'true'
+         }
+      });
       if (!response) throw new Error("Not find any products");
       return response.data;
    } catch (error) {
