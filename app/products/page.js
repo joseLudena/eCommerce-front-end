@@ -1,12 +1,12 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
+import HeroListProduct from "@/components/HeroListProduct";
 
-export default function Home() {
+export default function Products() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      <Hero />
+      <HeroListProduct />
       <Footer />
     </div>
   );
