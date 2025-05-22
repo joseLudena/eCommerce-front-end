@@ -6,7 +6,7 @@ import { useCart } from "@/context/CartContext"
 
 export default function CartGrid() {
    const { cart, updateQuantity, removeFromCart, completePurchase } = useCart()
-   // 🚀
+   //  🚀
    const calculateTotal = () => {
       return cart.reduce((total, item) => total + item.product.price * item.quantity, 0)
    }
